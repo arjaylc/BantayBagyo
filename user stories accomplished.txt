@@ -1,0 +1,5 @@
+1. User Story: The user checks for typhoon details like the typhoon name, storm signal numbers, and wind speeds on different affected areas. 
+2. User Story: The user checks for specific information such as the definitions of the different signal numbers.
+3. User Story: The user opens the website glossary for the definition of terms like LPA.
+4. User Story: The user can view the map of the Philippines which indicates the signal numbers on the different regions.
+5. User Story: The user can view the legend of the different colors in the map and their respective signal numbers.  

@@ -1,0 +1,150 @@
+header{
+z-index: 5;
+    position: fixed;
+    background-color: #222;
+    height: 50px;
+    color: white;
+width:100%;
+
+}
+body{
+    background-color:#116699;
+    font-family: 'Century Gothic';
+}
+#header-wrapper{
+    width:85%;
+    margin: auto;
+    padding-top: 13px;
+}
+
+#logo-wrapper{
+    float: left;
+}
+#form-wrapper{
+    float: right;
+}
+
+#floating-sidebar-typhoon,#floating-sidebar-signal{
+    z-index:5;
+    -webkit-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+    
+}
+
+#floating-sidebar-typhoon{
+    position: fixed;
+    top: 25%;
+    display: block;    
+    height: 325px;
+    width: 250px;
+    margin-left: -225px;
+    background-color: #eee;
+    color: #222;
+    font-size: 20px;
+       
+}
+
+#floating-sidebar-typhoon:hover{
+    margin-left: 0px;
+}
+
+#floating-sidebar-typhoon:hover,#floating-sidebar-typhoon{    
+    transition: margin-left .65s ease-out;
+}
+
+#floating-sidebar-signal{
+    position: fixed;
+    top: 25%;
+    right:0%;
+    display: block;    
+    height: 325px;
+    width: 250px;
+    background-color: #eee;
+    color: #222;
+    font-size: 20px;
+    margin-right: -225px;
+    
+}
+
+#floating-sidebar-signal:hover{
+    margin-right: 0px;
+}
+
+#floating-sidebar-signal:hover,#floating-sidebar-signal{    
+    transition: margin-right .65s ease-out;
+}
+
+
+#floating-sidebar-header{
+    background-color: #333;
+    color: white;
+    width: 25px;
+    height: 325px;
+    float:right;
+}
+
+.floating-sidebar-details{
+    padding: 10px 10px;
+    overflow: hidden;
+}
+
+.floating-sidebar-details table{
+    width: 100%;
+}
+
+#floating-sidebar-right-header{
+    background-color: #333;
+    color: white;
+    width: 25px;
+    height: 325px;
+    float:left;
+}
+.table-cat{
+    font-weight: bold;
+}
+
+#mainContentWrapper{
+    width: 90%;
+    margin: auto;
+    
+}
+
+
+#legendWrapper{
+    left:25%;
+    z-index: 5;
+    width: 50%;
+    height: 30px;
+    position: fixed;
+    bottom: 0;
+    background: #222;
+}
+
+#legendContent{
+    color: white;
+}
+#legendContent table{
+    padding-top: 5px;
+    margin: auto;
+    table-layout: auto;
+    text-align: center;
+}
+
+#fine{
+    color: #33CC00;
+}
+#sig1{
+    color: #FFCC00;
+}
+#sig2{
+    
+    color: #DD9900;
+}
+#sig3{    
+    color: #CC6600;
+}
+#sig4{
+    
+    color: red;
+}

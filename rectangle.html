@@ -1,0 +1,40 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Rectangle, biatch!</title>
+        <script type="text/javascript"><!--
+            window.addEventListener('load', function () {
+            // Get the canvas element.
+            var elem = document.getElementById('myCanvas');
+            var elem2 = document.getElementById('myCanvas2');
+            if (!elem || !elem.getContext) {
+                return;
+            }
+            if (!elem2 || !elem2.getContext) {
+                return;
+            }
+            // Get the canvas 2d context.
+            var context = elem.getContext('2d');
+            var context2 = elem2.getContext('2d');
+            if (!context || !context2) {
+                return;
+            }
+            // Now you are done! Let's draw a blue rectangle.
+            context.fillStyle = '#00f';
+            context.fillRect(0, 0, 150, 100);
+            context2.fillStyle = '#f00';
+            context2.fillRect(0, 0, 150, 100);
+        }, false);// -->
+        </script>
+    </head>
+    <body>
+        <p>
+            <canvas id="myCanvas" width="200" height="150">
+            </canvas>
+        </p>
+        <p>
+            <canvas id="myCanvas2" width="200" height="150">
+            </canvas>
+        </p>
+    </body>
+</html>

@@ -1,10 +1,9 @@
 header{
-z-index: 5;
-    position: fixed;
+    z-index: 5;
     background-color: #222;
     height: 50px;
     color: white;
-width:100%;
+    width:100%;
 
 }
 body{
@@ -110,6 +109,15 @@ body{
     
 }
 
+#mainContent{
+    height: 100%;
+    width: 100%;
+      
+}
+#mapPh{
+    display: block;
+    margin: auto;
+}
 
 #legendWrapper{
     left:25%;

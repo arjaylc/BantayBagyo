@@ -1,78 +1,58 @@
 header{
-    z-index: 5;
+    z-index: 6;
     background-color: #222;
-    height: 50px;
+    height:50px;
     color: white;
     width:100%;
-
+    position:fixed;
+}
+body,html{    
+    height:100%;
+    width:100%;
 }
 body{
     background-color:#116699;
     font-family: 'Century Gothic';
 }
+p{
+    margin:0px;
+}
 #header-wrapper{
     width:85%;
-    margin: auto;
-    padding-top: 13px;
+    margin-left: auto;
+    margin-right:auto;
+    padding-top:10px;
+    font: 30px;
 }
 
 #logo-wrapper{
     float: left;
 }
+
 #form-wrapper{
     float: right;
 }
 
 #floating-sidebar-typhoon,#floating-sidebar-signal{
-    z-index:5;
-    -webkit-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
-    
+    z-index:5;   
+    background-color: #eee;
+    color: #222; 
+    font-size: 20px;
 }
 
 #floating-sidebar-typhoon{
-    position: fixed;
-    top: 25%;
-    display: block;    
-    height: 325px;
-    width: 250px;
-    margin-left: -225px;
-    background-color: #eee;
-    color: #222;
-    font-size: 20px;
-       
+	float:left;
+    display: block;
+    height: 100%;
+    width: 20%;       
 }
 
 #floating-sidebar-typhoon:hover{
     margin-left: 0px;
 }
 
-#floating-sidebar-typhoon:hover,#floating-sidebar-typhoon{    
-    transition: margin-left .65s ease-out;
-}
 
-#floating-sidebar-signal{
-    position: fixed;
-    top: 25%;
-    right:0%;
-    display: block;    
-    height: 325px;
-    width: 250px;
-    background-color: #eee;
-    color: #222;
-    font-size: 20px;
-    margin-right: -225px;
-    
-}
 
-#floating-sidebar-signal:hover{
-    margin-right: 0px;
-}
-
-#floating-sidebar-signal:hover,#floating-sidebar-signal{    
-    transition: margin-right .65s ease-out;
-}
 
 
 #floating-sidebar-header{
@@ -86,6 +66,7 @@ body{
 .floating-sidebar-details{
     padding: 10px 10px;
     overflow: hidden;
+    height:100%;
 }
 
 .floating-sidebar-details table{
@@ -104,19 +85,18 @@ body{
 }
 
 #mainContentWrapper{
-    width: 90%;
-    margin: auto;
-    
+    clear: both;
+    padding-top:50px;
+    width: 100%;  
+    height: 100%; 
 }
 
-#mainContent{
-    height: 100%;
-    width: 100%;
-      
-}
+
 #mapPh{
     display: block;
     margin: auto;
+    height:668.2px;
+    width:457.6px;
 }
 
 #legendWrapper{

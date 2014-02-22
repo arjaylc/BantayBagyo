@@ -6,9 +6,9 @@
     <title>Bantay Bagyo | Welcome</title>
     <link rel="stylesheet" href="css/foundation.css" />
     <link rel="stylesheet" href="css/bantaybagyo.css" />
-    <script src="js/vendor/modernizr.js"></script>
+    <script src="js/vendor/modernizr.js"></script>   
     
-    
+    <script src="js/svg-pan-zoom.js"></script>
   </head>
   <body>
     
@@ -59,9 +59,8 @@
       </div>
       <div id = "mapWrapper">
 	
-	<object id = "phMap" data="assets/Philippine Map.svg" type="image/svg+xml">
-	    <span>Your browser doesn't support SVG images</span>
-	</object>
+	 <object id = "phMap" type="image/svg+xml" data="assets/Philippine Map.svg">Your browser does not support SVG</object>
+
       </div>
    
 
@@ -78,6 +77,12 @@
     <script src="js/foundation.min.js"></script>
     <script>
       $(document).foundation();
+      window.onload = function(){
+	  svgPanZoom.init({
+	    //'selector': 'svg',
+	    'zoomEnabled': true 
+	  });
+      }
     </script>
   </body>
 </html>

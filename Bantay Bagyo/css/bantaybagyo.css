@@ -74,12 +74,6 @@ header{
 }
 
 
-#mapPh{
-    display: block;
-    margin: auto;
-    height:668.2px;
-    width:457.6px;
-}
 
 #legendWrapper{
     left:25%;
@@ -129,11 +123,17 @@ header{
 #mapWrapper {
     position: relative;
     width: 100%;
+    height: 100%;
 }
 
-object { position:fixed; top:50px; left:0; height:93%; width:100%; z-index:-2;}
+#phMap {
+    position: relative;
+    width: 100%;
+    height: 723px;
+}
 
 #legend{
+    z-index: 2;
     position: fixed;
     bottom:0;
     right: 0;    
@@ -158,12 +158,19 @@ object { position:fixed; top:50px; left:0; height:93%; width:100%; z-index:-2;}
     #legend{
         top: 0%;
         position: relative;
-        height: 45px;
         width: 100%;       
     }
     
-    object{
-        top:130px;
+   
+}
+@media (max-width: 520px){
+  
+   
+    #legend{
+        height: 60px;
     }
+    
+    
 
 }
+

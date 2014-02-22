@@ -1,12 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" 
-	  width="2000.64px" height="3120px"  viewBox="0 0 2000.64 3120"  xml:space="preserve">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px">
 
-<!--<script xlink:href="SVGPan.js"/>-->
-
-<g id = "viewport">
+<g id="viewport">
 <path id="Metro_Manila" fill="#B9B9B9" d="M848.811,1301.781c0.765-0.521,1.351-1.304,2.019-1.967l-0.001-0.001
 	c-0.573-5.079,0.079-10.021,1.112-15.021c0.896-4.328,2.873-7.584,6.59-9.857c0.001,0,0.001-0.001,0.002-0.001
 	c-0.013-5.106-0.075-10.213-0.015-15.318c0.023-1.947,0.573-3.848,1.979-5.269c1.778-1.798,2.315-3.725,1.208-6.053
@@ -2366,5 +2362,4 @@
 	c1.633,1.937,3.786,3.428,5.62,5.206c1.669,1.619,2.604,3.666,2.658,5.997c0.06,2.553-0.093,5.111-0.066,7.666
 	c0.019,1.741,1.721,3.907,3.332,4.318c4.44,1.131,9.014,1.539,13.116-0.66C803.301,768.338,807.271,767.819,811.467,767.809z"/>
 </g>
-
 </svg>

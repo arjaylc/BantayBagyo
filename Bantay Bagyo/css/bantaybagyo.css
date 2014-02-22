@@ -1,14 +1,9 @@
-header{
-    z-index: 6;
-    background-color: #222;
-    height:50px;
-    color: white;
-    width:100%;
-    position:fixed;
-}
+
 body,html{    
     height:100%;
     width:100%;
+    padding: 0px;
+    margin: 0px;
 }
 body{
     background-color:#116699;
@@ -16,6 +11,12 @@ body{
 }
 p{
     margin:0px;
+}
+header{
+    background-color: #222;
+    height:50px;
+    color: white;
+    width:100%;
 }
 #header-wrapper{
     width:85%;
@@ -34,17 +35,17 @@ p{
 }
 
 #floating-sidebar-typhoon,#floating-sidebar-signal{
-    z-index:5;   
     background-color: #eee;
     color: #222; 
     font-size: 20px;
 }
 
 #floating-sidebar-typhoon{
-	float:left;
-    display: block;
-    height: 100%;
-    width: 20%;       
+    position: fixed;
+    top: 50px;
+    left:0%;
+    height: 100px;
+    width: 240px;       
 }
 
 #floating-sidebar-typhoon:hover{
@@ -64,6 +65,7 @@ p{
 }
 
 .floating-sidebar-details{
+    position: relative;
     padding: 10px 10px;
     overflow: hidden;
     height:100%;
@@ -86,9 +88,8 @@ p{
 
 #mainContentWrapper{
     clear: both;
-    padding-top:50px;
     width: 100%;  
-    height: 100%; 
+    height: 93%; 
 }
 
 
@@ -135,4 +136,29 @@ p{
 #sig4{
     
     color: red;
+}
+
+
+@media (max-width: 700px){
+    header{
+        height: 50px;
+    }
+    #floating-sidebar-typhoon{
+        top: 0%;
+        position: relative;
+        height: 65px;
+        width: 100%;       
+    }
+    
+    
+    /* Force table to not be like tables anymore */
+
+    
+    td { 
+        /* Behave  like a "row" */
+        border: none;
+        position: relative;
+
+    }
+
 }

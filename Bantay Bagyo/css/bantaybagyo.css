@@ -1,5 +1,5 @@
 
-body,html{    
+body{    
     height:100%;
     width:100%;
     padding: 0px;
@@ -13,6 +13,7 @@ p{
     margin:0px;
 }
 header{
+    z-index: 2;
     background-color: #222;
     height:50px;
     color: white;
@@ -38,50 +39,30 @@ header{
     background-color: #eee;
     color: #222; 
     font-size: 20px;
+    -webkit-box-shadow: 10px 3px 5px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    10px 3px 5px 0px rgba(50, 50, 50, 0.75);
+    box-shadow:         10px 3px 5px 0px rgba(50, 50, 50, 0.75);
 }
 
 #floating-sidebar-typhoon{
-    position: fixed;
+    z-index: 2;
+    position: absolute;
     top: 50px;
     left:0%;
     height: 100px;
     width: 240px;       
 }
 
-#floating-sidebar-typhoon:hover{
-    margin-left: 0px;
-}
-
-
-
-
-
-#floating-sidebar-header{
-    background-color: #333;
-    color: white;
-    width: 25px;
-    height: 325px;
-    float:right;
-}
 
 .floating-sidebar-details{
-    position: relative;
     padding: 10px 10px;
-    overflow: hidden;
-    height:100%;
 }
 
 .floating-sidebar-details table{
     width: 100%;
 }
 
-#floating-sidebar-right-header{
-    background-color: #333;
-    color: white;
-    width: 25px;
-    height: 325px;
-    float:left;
-}
+
 .table-cat{
     font-weight: bold;
 }
@@ -137,28 +118,52 @@ header{
     
     color: red;
 }
+.fine{
+    fill: #E1E45B;
+}
 
+.signal1{
+    fill: #303;
+}
 
-@media (max-width: 700px){
-    header{
-        height: 50px;
-    }
+#mapWrapper {
+    position: relative;
+    width: 100%;
+}
+
+object { position:fixed; top:50px; left:0; height:93%; width:100%; z-index:-2;}
+
+#legend{
+    position: fixed;
+    bottom:0;
+    right: 0;    
+    background-color: #eee;
+    color: #222; 
+    font-size: 20px;
+    height: 45px;
+    width: 505px;
+    padding: 10px 10px;
+}
+@media (max-width: 640px){
+  
     #floating-sidebar-typhoon{
         top: 0%;
         position: relative;
         height: 65px;
+        width: 100%;
+        -webkit-box-shadow: 0px 0px 0px 0px rgba(50, 50, 50, 0.75);
+        -moz-box-shadow:    0px 0px 0px 0px rgba(50, 50, 50, 0.75);
+        box-shadow:         0px 0px 0px 0px rgba(50, 50, 50, 0.75);    
+    }
+    #legend{
+        top: 0%;
+        position: relative;
+        height: 45px;
         width: 100%;       
     }
     
-    
-    /* Force table to not be like tables anymore */
-
-    
-    td { 
-        /* Behave  like a "row" */
-        border: none;
-        position: relative;
-
+    object{
+        top:130px;
     }
 
 }

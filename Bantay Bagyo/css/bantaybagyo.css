@@ -95,30 +95,29 @@ header{
     text-align: center;
 }
 
-#fine{
-    color: #33CC00;
+
+.sig1{
+    background-color: #FFCC00;
+    fill: #FFCC00;
 }
-#sig1{
-    color: #FFCC00;
+.sig2{    
+    background-color: #DD9900;
+    fill: #DD9900;
 }
-#sig2{
-    
-    color: #DD9900;
+.sig3{    
+    background-color: #CC6600;
+    fill: #CC6600;
 }
-#sig3{    
-    color: #CC6600;
-}
-#sig4{
-    
-    color: red;
+.sig4{    
+    background-color: red;
+    fill: red;
 }
 .fine{
-    fill: #E1E45B;
+    background-color: #339944;
+    fill: #339944;
 }
 
-.signal1{
-    fill: #303;
-}
+
 
 #mapWrapper {
     position: relative;
@@ -140,9 +139,13 @@ header{
     background-color: #eee;
     color: #222; 
     font-size: 20px;
-    height: 45px;
+    height: 50px;
     width: 505px;
-    padding: 10px 10px;
+}
+
+#legend table td{
+    text-align: center;
+    padding: 5px 5px;
 }
 @media (max-width: 640px){
   

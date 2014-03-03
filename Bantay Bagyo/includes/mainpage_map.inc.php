@@ -1,65 +1,4 @@
-<!doctype html>
-<html class="no-js" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bantay Bagyo | Welcome</title>
-    <link rel="stylesheet" href="css/foundation.css" />
-    <link rel="stylesheet" href="css/bantaybagyo.css" />
-    <script src="js/vendor/modernizr.js"></script>   
-    
-    <script src="js/svg-pan-zoom.js"></script>
-  </head>
-  <body>
-    
-    <header>
-      <div id="header-wrapper">
-	  <div id = "logo-wrapper">
-	    <p>Bantay Bagyo</p>
-	  </div>
-	  <div id = "form-wrapper">
-	    <p></p>	  
-	  </div>
-      </div>
-    </header>
-    
-    
-     
-
-    <div id = "mainContentWrapper">
-	  
-      <div id = "floating-sidebar-typhoon">	
-	<div class = "floating-sidebar-details">    
-	  <table>
-	    <tr>
-	      <td class="table-cat">Name:</td>
-	      <td>Basyang</td>
-	    </tr>
-	    <tr>
-	      <td class="table-cat">Wind Speed:</td>
-	      <td>100-110kph</td>
-	    </tr>	      
-	  </table>
-	</div>
-      </div>
-      
-      <div id="legend">
-	
-	<table>
-	  <tr>
-	    <td class="table-cat">Legend:</td>
-	    <td class="table-cat fine">Fine</td>
-	    <td class="table-cat sig1">Signal #1</td>
-	    <td class="table-cat sig2">Signal #2</td>
-	    <td class="table-cat sig3">Signal #3</td>
-	    <td class="table-cat sig4">Signal #4</td>
-	  </tr>      
-	</table>
-	
-      </div>
-      <div id = "mapWrapper">
-	
-	 <svg id="phMap" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px">
+<svg id="phMap" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px">
 
 <g id="viewport">
 <path class = "fine" id="Metro_Manila" fill="#B9B9B9" d="M848.811,1301.781c0.765-0.521,1.351-1.304,2.019-1.967l-0.001-0.001
@@ -2422,29 +2361,16 @@
 	c0.019,1.741,1.721,3.907,3.332,4.318c4.44,1.131,9.014,1.539,13.116-0.66C803.301,768.338,807.271,767.819,811.467,767.809z"/>
 </g>
 </svg>
-
-      </div>
-   
-
-    </div>
-
-
-
-
-    </div>
-    
-    
-    
+    <script src="js/vendor/modernizr.js"></script>  
+    <script src="js/svg-pan-zoom.js"></script>
     <script src="js/vendor/jquery.js"></script>
     <script src="js/foundation.min.js"></script>
     <script>
       $(document).foundation();
       window.onload = function(){
-	  svgPanZoom.init({
-	    //'selector': 'svg',
-	    'zoomEnabled': true 
-	  });
+    svgPanZoom.init({
+      //'selector': 'svg',
+      'zoomEnabled': true 
+    });
       }
     </script>
-  </body>
-</html>

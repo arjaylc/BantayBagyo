@@ -56,15 +56,15 @@
 				if(mysqli_num_rows($result)) return false;
 				else return true;
 			}
-			else return false;
+			else return true;
 		}
 
 		public function checkProvince($provinces){
 			$query = "SELECT province FROM provinces WHERE province='$provinces'";
 			$result = mysqli_query($this->databaseConnection, $query);
 			if($result){
-				if(mysqli_num_rows($result)) return false;
-				else return true;
+				if(mysqli_num_rows($result)) return true;
+				else return false;
 			}
 			else return false;
 		}

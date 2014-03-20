@@ -25,6 +25,7 @@
 			unset($_SESSION['firstname']);
 			unset($_SESSION['lastname']);
 			unset($_SESSION['province']);
+			unset($_SESSION['logged']);
 			setcookie('username', $d_username, time()-$cookie_duration);
 			setcookie('usertype', $usertype, time()-$cookie_duration);
 			setcookie('firstname', $firstname, time()-$cookie_duration);

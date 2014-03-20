@@ -32,15 +32,15 @@
 	$redirectPage = 'index.php?';
 	if(!$database_master->checkUsername($username)){
 		$errors['username'] = "username";
-		$redirectPage.='username=$username';
+		$redirectPage.='username='.$username;
 	}
-	if(!$database_master->checkUsername($email)){
+	if(!$database_master->checkEmail($email)){
 		$errors['email'] = "email";
-		$redirectPage.='&email=$email';
+		$redirectPage.='&email='.$email;
 	}
 	if(!$database_master->checkProvince($province)){
 		$errors['province'] = "province";
-		$redirectPage.='&province=$province';
+		$redirectPage.='&province='.$province;
 	}
 
 	$usertype = 'basic';

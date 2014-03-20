@@ -1,6 +1,6 @@
-<div id="register-overlay">
+<div id="settings-overlay">
 	<div id="form" class="rounded-small">
-	<form id="registerform" action="check_register.php" method="POST">
+	<form id="settingsform" action="check_settings.php" method="POST">
 		<?php
       		if(isset($_GET['username'])){?>
       	<span id = "username-error"><?php echo "'".$_GET['username']."' has already been taken."?></span>
@@ -10,9 +10,9 @@
 		<label for="username" >Username</label>
 		<input type="text" id="username" maxlength = "64"
 		required autofocus pattern = "[a-zA-z0-9]{6}[a-zA-z0-9]*" 
-		title = "letters and numbers only; at least 6 characters; no spaces" placeholder="Username" name="username"/>
+		title = "letters and numbers only; at least 6 characters" placeholder="Username" name="username"/>
 		<label for="password1">Password</label>
-		<input type="password" id = "password1" maxlength = "64" title = "at least 6 characters"
+		<input type="password" id = "password1" maxlength = "64"
 		onchange="validatePassword()" required placeholder="Password" name="password1"/>
 		<label for="password2">Re-type Password</label>
 		<input type="password" id="password2" maxlength = "64"

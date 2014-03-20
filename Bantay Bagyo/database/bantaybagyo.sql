@@ -5,6 +5,8 @@ drop table if exists logtypes;
 drop table if exists relatives;
 drop table if exists users;
 drop table if exists usertypes;
+drop table if exists provinces;
+drop table if exists signalnumbers;
 /*
 	user types table -- may be useful in the future
 	current usertypes -- admin and basic
@@ -56,12 +58,14 @@ create table users(
 	constraint fk_usertype foreign key(usertype) references usertypes(usertype)
 );
 insert into users values
-("arjaylc", SHA('123456')
+("arjaylc", '7c4a8d09ca3762af61e59520943dc26494f8941b'
 , "Rodrigo", "Cal", "admin", "Cebu", null), 
-("julius",SHA('123456')
+("julius",'7c4a8d09ca3762af61e59520943dc26494f8941b'
 , "Julius", "Bautista", "admin","somewhere", null),
-("carlangelo",SHA('123456'), "Carl", "Chan", "basic", "Bulacan", null),
-("lucas", SHA('123456'), "Carl", "Young", "basic", "Davao", null);
+("carlangelo",'7c4a8d09ca3762af61e59520943dc26494f8941b'
+, "Carl", "Chan", "basic", "Bulacan", null),
+("lucas",'7c4a8d09ca3762af61e59520943dc26494f8941b'
+, "Carl", "Young", "basic", "Davao", null);
 /*
 	relatives table
 	values(relative name, username)
@@ -72,8 +76,6 @@ create table relatives(
 	primary key(relativename),
 	constraint fk_username foreign key(username) references users(username)
 );
-drop table if exists provinces;
-drop table if exists signalnumbers;
 /*
 	log type table
 */

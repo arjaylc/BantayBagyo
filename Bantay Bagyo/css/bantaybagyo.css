@@ -13,6 +13,9 @@ body, button, #submitForm{
 body, div, ul, li, p, span, label{
     cursor:default;
 }
+span{
+    font-size: 11px;
+}
 p, button{
     margin:0px;
 }
@@ -293,4 +296,13 @@ input:optional:valid {
 #settingsbutton, #logoutbutton, #adminbutton{
     width: 150px;
     height: 30px;
+}
+#loginerror, #username-error, #email-error, #province-error{
+    color: red;
+    font: 12px;
+    display:inline-block;
+    border:1px solid rgba(0.5,0,0,0); 
+    background:hsl(0, 50%, 90%);
+    margin-bottom: 10px;
+    padding: 2px;
 }

@@ -14,6 +14,32 @@ create table usertypes(
 	primary key(usertype)
 );
 insert into usertypes values("admin"), ("basic");
+
+/*
+	signal numbers table
+	values(signal number, windspeed min value, windspeed max value)
+	note: null max value means infinite or unlimited
+*/
+create table signalnumbers(
+	signalnumber tinyint not null,
+	mapcolor varchar(6) not null,
+	windspeedmin int not null,
+	windspeedmax int,
+	primary key(signalnumber)
+);
+insert into signalnumbers values (1,"FFCC00",30,60),(2,"DD9900",61,100),(3,"CC6600",101,185),
+(4,"red",186,null);
+/*
+	cities table -- only info for now is signal number
+	values(city name, signal number)
+	note: null signal number means weather is fine
+*/
+create table provinces(
+	province varchar(64) not null,
+	signalnumber tinyint,
+	primary key(province),
+	constraint fk_signalnumber foreign key(signalnumber) references signalnumbers(signalnumber)
+);
 /*
 	users table
 	values(username, password, usertype)
@@ -24,9 +50,18 @@ create table users(
 	firstname varchar(64),
 	lastname varchar(64),
 	usertype char(5) not null,
+	province varchar(64) not null,
+	email_address varchar(64),
 	primary key(username),
 	constraint fk_usertype foreign key(usertype) references usertypes(usertype)
 );
+insert into users values
+("arjaylc", SHA('123456')
+, "Rodrigo", "Cal", "admin", "Cebu", null), 
+("julius",SHA('123456')
+, "Julius", "Bautista", "admin","somewhere", null),
+("carlangelo",SHA('123456'), "Carl", "Chan", "basic", "Bulacan", null),
+("lucas", SHA('123456'), "Carl", "Young", "basic", "Davao", null);
 /*
 	relatives table
 	values(relative name, username)
@@ -37,31 +72,8 @@ create table relatives(
 	primary key(relativename),
 	constraint fk_username foreign key(username) references users(username)
 );
-drop table if exists cities;
+drop table if exists provinces;
 drop table if exists signalnumbers;
-/*
-	signal numbers table
-	values(signal number, windspeed min value, windspeed max value)
-	note: null max value means infinite or unlimited
-*/
-create table signalnumbers(
-	signalnumber tinyint not null,
-	windspeedmin int not null,
-	windspeedmax int,
-	primary key(signalnumber)
-);
-insert into signalnumbers values (1,30,60),(2,61,100),(3,101,185),(4,186,null);
-/*
-	cities table -- only info for now is signal number
-	values(city name, signal number)
-	note: null signal number means weather is fine
-*/
-create table cities(
-	city varchar(64) not null,
-	signalnumber tinyint,
-	primary key(city),
-	constraint fk_signalnumber foreign key(signalnumber) references signalnumbers(signalnumber)
-);
 /*
 	log type table
 */
@@ -69,7 +81,7 @@ create table logtypes(
 	logtype varchar(16) not null,
 	primary key(logtype)
 );
-insert into logtypes values("login"),("logout"),("edit_cities"), ("change_password"),
+insert into logtypes values("login"),("logout"),("edit_provinces"), ("change_password"),
 ("change_username");
 /*
 	log table
@@ -81,5 +93,5 @@ create table log(
 	logtype varchar(16) not null,
 	primary key (username, logdate),
 	constraint fk_type foreign key(logtype) references logtypes(logtype),
-	constraint fk_username foreign key(username) references users(username)
+	constraint fk_logsignalnumberssignalnumbersignalnumberusername foreign key(username) references users(username)
 );

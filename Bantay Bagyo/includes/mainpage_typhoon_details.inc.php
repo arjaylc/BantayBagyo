@@ -1,5 +1,5 @@
 <div id = "floating-sidebar-typhoon">	
-	<div class = "floating-sidebar-details">    
+	<div class = "floating-sidebar-details">
 	  <table>
 	    <tr>
 	      <td class="table-cat">Name:</td>

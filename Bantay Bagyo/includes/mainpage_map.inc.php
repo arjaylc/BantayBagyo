@@ -1,4 +1,5 @@
-<svg id="phMap" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px">
+<div id = "mapWrapper">
+	<svg id="phMap" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px">
 
 <g id="viewport">
 <path class = "fine" id="Metro_Manila" fill="#B9B9B9" d="M848.811,1301.781c0.765-0.521,1.351-1.304,2.019-1.967l-0.001-0.001
@@ -2374,3 +2375,7 @@
     });
       }
     </script>
+    <script src="js/vendor/modernizr.js"></script>   
+    
+    <script src="js/svg-pan-zoom.js"></script>
+    </div>

@@ -1,16 +1,34 @@
 
-body{    
+body{
     height:100%;
     width:100%;
     padding: 0px;
     margin: 0px;
-}
-body{
     background-color:#116699;
+}
+}
+body, button, #submitForm{
     font-family: 'Century Gothic';
 }
-p{
+body, div, ul, li, p, span, label{
+    cursor:default;
+}
+p, button{
     margin:0px;
+}
+button{
+    padding: 0px;
+    height: 50px;
+    width:100px;
+    background-color: #222;
+}
+a{
+    color: white;
+    text-decoration: none;
+    min-height: 100px;
+}
+a:hover{
+    color: white;
 }
 header{
     z-index: 2;
@@ -19,15 +37,36 @@ header{
     color: white;
     width:100%;
 }
+input:valid,
+input:in-range {
+    background:hsl(120, 50%, 90%);
+    border-color:hsl(120, 50%, 50%);
+}
+
+input:invalid, input:optional:invalid{
+    border-color:hsl(0, 50%, 50%);
+    background:hsl(0, 50%, 90%);
+}
+input:focus{
+    background:hsl(180, 50%, 90%);
+    border:1px solid #999;
+}
+input:optional:valid {
+    background:hsl(300, 50%, 90%);
+    border:1px dotted hsl(180, 50%, 90%);
+}
+#login_password, #login_username{
+    background:hsl(180, 50%, 90%);
+    border:1px solid #999;
+}
 #header-wrapper{
     width:85%;
     margin-left: auto;
     margin-right:auto;
-    padding-top:10px;
     font: 30px;
 }
-
 #logo-wrapper{
+    padding-top: 10px;
     float: left;
 }
 
@@ -47,13 +86,11 @@ header{
 #floating-sidebar-typhoon{
     z-index: 2;
     position: absolute;
-    top: 50px;
+    top: 0px;
     left:0%;
     height: 100px;
     width: 240px;       
 }
-
-
 .floating-sidebar-details{
     padding: 10px 10px;
 }
@@ -71,6 +108,7 @@ header{
     clear: both;
     width: 100%;  
     height: 93%; 
+    position:absolute;
 }
 
 
@@ -172,8 +210,87 @@ header{
     #legend{
         height: 60px;
     }
-    
-    
-
 }
-
+#form{
+    border:1px solid #aaa;
+    padding:10px;
+    padding-bottom: 0px;
+    float:left;
+    background-color:#fff;
+    font-size:15px;
+    width:215px;
+}
+#form, .textfield{
+    width:200px;
+}
+#content{
+    padding-bottom:10px;
+    border-bottom:1px solid #ccc;
+    font-size:18px;
+    margin-bottom:10px;
+}
+#cancelForm{
+    width: 80px;
+    background:linear-gradient(0deg, #222, #222);
+}
+#submitForm{
+    width:90px;
+    background:linear-gradient(0deg, #116699, #116699);
+}
+#submitForm, #cancelForm, #settingsbutton, #logoutbutton, #adminbutton{
+    border:1px solid rgba(0,0,0,0.3); 
+}
+#submitForm, #cancelForm{
+    color:#eee;
+    height: 30px;
+    font-size:15px;
+    text-shadow: 0 1px 1px #444444;
+    cursor:pointer;
+}
+#submitForm{
+    float:right;
+}
+#links{
+    position: relative;
+    float: right;
+}
+#register-overlay{
+    padding-right: 104px;
+}
+#register-overlay, #login-overlay, #dropdown-options{
+    position: relative;
+    display: none;
+    z-index: 7;
+    float: right;
+}
+#overlay, #overlay-options {
+    cursor: default;
+    display: none;
+    z-index: 6;
+    background: #000;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    text-align: center;
+}
+#logincheckbox{
+    font-size: 10px;
+}
+#optionsbutton{
+    width: 100%;
+    min-width: 150px;
+    max-width: 100%;
+    font-size: 13px;
+}
+#optionsbutton:active,#optionsbutton:hover{
+    background-color: #222;
+}
+#optionsbutton:hover{
+    color: gray;
+}
+#settingsbutton, #logoutbutton, #adminbutton{
+    width: 150px;
+    height: 30px;
+}

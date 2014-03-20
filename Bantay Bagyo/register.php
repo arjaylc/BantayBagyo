@@ -2,8 +2,8 @@
 $title='Register';
 include('includes/header.inc.php');
 ?>
-<div id="pt-formholder" class="rounded-small">
-<h1 id="pt-contentheader">Register</h1>
+<div id="formholder" class="rounded-small">
+<h1 id="contentheader">Register</h1>
 <form id="registerform" action="register.php" method="POST">
 	Username <input type="text" placeholder="Username" name="username"/>
 	Password <input type="password" placeholder="Password" name="password"/><span id="passerror"></span>

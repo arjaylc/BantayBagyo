@@ -31,11 +31,11 @@
 			}
 			else return false;
 		}
-		public function querySearch($query){
+		public function querySearch($query, $rowName){
 			$result = mysqli_query($this->databaseConnection, $query);
 			$data = array();
    			while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-        		array_push($data, $row['province']);    
+        		array_push($data, $row[$rowName]);    
     		}
     		return $data;
 		}

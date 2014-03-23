@@ -12,7 +12,7 @@
 	$password = $_POST['password'];
 	$password = $database_master->escapeString($password);
 
-	$query = "SELECT username, usertype, firstname, lastname, province FROM users WHERE username = '$username' AND 
+	$query = "SELECT username, usertype, firstname, lastname, province, email_address FROM users WHERE username = '$username' AND 
 	password = SHA('$password')";
 
 	$queryResult = $database_master->querySelect($query);
@@ -22,11 +22,16 @@
 	$firstname = $queryResult[0]['firstname'];
 	$lastname = $queryResult[0]['lastname'];
 	$province = $queryResult[0]['province'];
+	$email_address = $queryResult[0]['email_address'];
 	if(is_array($queryResult) && count($queryResult)){
 		$session_master = new SessionMaster();
-		$session_master->logUserIn($d_username, $usertype, $firstname, $lastname, $province);
+		$session_master->logUserIn($d_username, $usertype, $firstname, $lastname, $province, $email_address);
 		if($_POST['loginkeep']=="on"){
 			$cookie_duration = 2764800; //1 month in seconds
+			if(empty($email_address)){
+				$email_address = -1;
+			}
+			setcookie('email', $email_address, time()+$cookie_duration);
 			setcookie('username', $d_username, time()+$cookie_duration);
 			setcookie('usertype', $usertype, time()+$cookie_duration);
 			setcookie('firstname', $firstname, time()+$cookie_duration);

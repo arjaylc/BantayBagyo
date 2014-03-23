@@ -5,7 +5,7 @@ body{
     padding: 0px;
     margin: 0px;
     background-color:#116699;
-}
+    position: fixed;
 }
 body, button, #submitForm{
     font-family: 'Century Gothic';
@@ -16,6 +16,9 @@ body, div, ul, li, p, span, label{
 span{
     font-size: 11px;
 }
+strong{
+    font-weight: 500;
+}
 p, button{
     margin:0px;
 }
@@ -23,6 +26,10 @@ button{
     padding: 0px;
     height: 50px;
     width:100px;
+    background-color: #222;
+    z-index: 2;
+}
+button:focus{
     background-color: #222;
 }
 a{
@@ -96,6 +103,7 @@ input:optional:valid {
 }
 .floating-sidebar-details{
     padding: 10px 10px;
+    margin-top: 0;
 }
 
 .floating-sidebar-details table{
@@ -159,16 +167,19 @@ input:optional:valid {
 }
 
 
-
-#mapWrapper {
-    position: relative;
+#mapWrapper, #phMap{
+    position: fixed;
     width: 100%;
+    padding: 0px;
+    margin: 0px;
+
+}
+#mapWrapper {
     height: 100%;
 }
 
 #phMap {
-    position: relative;
-    width: 100%;
+    position: fixed;
     height: 723px;
 }
 
@@ -261,12 +272,19 @@ input:optional:valid {
     padding-right: 104px;
 }
 #register-overlay, #login-overlay, #dropdown-options{
+    float: right;
+}
+#register-overlay, #login-overlay, #dropdown-options, #settings-overlay{
     position: relative;
     display: none;
     z-index: 7;
-    float: right;
 }
-#overlay, #overlay-options {
+#settings-overlay{
+    width:200px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+#overlay, #overlay-options, #overlay-settings {
     cursor: default;
     display: none;
     z-index: 6;
@@ -305,4 +323,16 @@ input:optional:valid {
     background:hsl(0, 50%, 90%);
     margin-bottom: 10px;
     padding: 2px;
+}
+#changePasswordButton, #addProvinceButton{
+    color: gray;
+    background: white;
+    font-size: 13px;
+    height: auto;
+    width: auto;
+    margin-bottom: 10px;
+}
+#changePasswordButton:hover, #addProvinceButton:hover{
+    text-decoration: underline;
+    color: #222;
 }

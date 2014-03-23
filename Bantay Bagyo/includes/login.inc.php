@@ -16,7 +16,7 @@
 		required placeholder="Password" name="password"/>
 		<input type = "checkbox" id="loginkeep" name="loginkeep"><label for="loginkeep">Keep me logged in</label>
 		<input id="submitForm" type="submit" value="Log-in"/>
-		<button id ="cancelForm" onclick ="toggleOverlay(2)">Cancel</button>
+		<button id ="cancelForm" type = "button" onclick ="toggleOverlay(2)">Cancel</button>
 	</form>
 	</div>
 </div>

@@ -1,51 +1,33 @@
+<button id="overlay-settings" onclick= "toggleSettings(0)"></button>
 <div id="settings-overlay">
 	<div id="form" class="rounded-small">
 	<form id="settingsform" action="check_settings.php" method="POST">
-		<?php
-      		if(isset($_GET['username'])){?>
-      	<span id = "username-error"><?php echo "'".$_GET['username']."' has already been taken."?></span>
-    	<?php
-      		}
-    	?>
 		<label for="username" >Username</label>
-		<input type="text" id="username" maxlength = "64"
+		<input type="text" id="username" maxlength = "64" value = "<?php echo $_SESSION['username']?>"
 		required autofocus pattern = "[a-zA-z0-9]{6}[a-zA-z0-9]*" 
 		title = "letters and numbers only; at least 6 characters" placeholder="Username" name="username"/>
-		<label for="password1">Password</label>
-		<input type="password" id = "password1" maxlength = "64"
-		onchange="validatePassword()" required placeholder="Password" name="password1"/>
-		<label for="password2">Re-type Password</label>
-		<input type="password" id="password2" maxlength = "64"
-		onchange="validatePassword()" required placeholder="Re-type Password" name="password2"/>
-		<label for="firstname">First Name</label>
-		<input type="text" id = "firstname" maxlength = "64"
+		<label for="firstname">First Name</label> 
+		<input type="text" id = "firstname" maxlength = "64" value = "<?php echo $_SESSION['firstname']?>"
 		required pattern = "[a-zA-z\s]*" title = "letters and spaces only"
 		 placeholder="First Name" name="firstname"/>
 		<label for="lastname">Last Name</label>
-		<input type="text" id = "lastname" maxlength = "64"
+		<input type="text" id = "lastname" maxlength = "64" value = "<?php echo $_SESSION['lastname']?>"
 		required pattern = "[a-zA-z\s]*" title = "letters and spaces only"
 		placeholder="Last Name" name="lastname"/>
-		<?php
-      		if(isset($_GET['province'])){?>
-      	<span id = "province-error"><?php echo "'".$_GET['province']."' is not a valid province."?></span>
-    	<?php
-      		}
-    	?>
-		<label for="province">Province</label>
-		<?php
-			include ("includes/search_textfield.inc.php");
-		?>
-		<?php
-      		if(isset($_GET['email'])){?>
-      	<span id = "email-error"><?php echo "'".$_GET['email']."' already has an account."?></span>
-    	<?php
-      		}
-    	?>
-		<label for="email">Email Address (optional)</label>
-		<input type="email" id = "email" maxlength = "64"
+		<label for="email">Email Address</label>
+		<input type="email" id = "email" maxlength = "64" value = "<?php
+		 if($_SESSION['email']==-1){
+		 	$email = '';
+		 } else{
+		 	$email = $_SESSION['email'];
+		 }
+		 echo $email
+		?>"
 		placeholder="Email Address" name="email"/>
-		<input id="submitForm" type="submit" value="Register"/>
-		<button id ="cancelForm" onclick ="toggleOverlay(1)">Cancel</button>
+		<button id = "changePasswordButton" type =  "button"><strong>Change Password?</strong></button>
+		<button id = "addProvinceButton" type =  "button"><strong>Add Provinces?</strong></button><br>
+		<input id="submitForm" type="submit" value="Save"/>
+		<button id ="cancelForm" type = "button" onclick ="toggleSettings(1)">Cancel</button>
 	</form>
 	</div>
 </div>

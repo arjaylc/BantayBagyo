@@ -54,7 +54,7 @@
 			$query .= "'$email');";
 		}
 		if($database_master->queryUpdate($query)){
-			$session_master->logUserIn($username, $usertype, $firstname, $lastname, $province);
+			$session_master->logUserIn($username, $usertype, $firstname, $lastname, $province, $email);
 			$page_master->redirectUser();
 		}
 		else $page_master->redirectUser('index.php?error=database');

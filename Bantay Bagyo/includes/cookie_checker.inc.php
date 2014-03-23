@@ -9,6 +9,7 @@
 		$firstname = $_COOKIE['firstname'];
 		$lastname = $_COOKIE['lastname'];
 		$province = $_COOKIE['province'];
-		$session_master->logUserIn($username, $type, $firstname, $lastname, $province);
+		$email =  $_COOKIE['email'];
+		$session_master->logUserIn($username, $type, $firstname, $lastname, $province, $email);
 	}
 ?>

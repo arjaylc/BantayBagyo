@@ -23,7 +23,7 @@
 		 placeholder="First Name" name="firstname"/>
 		<label for="lastname">Last Name</label>
 		<input type="text" id = "lastname" maxlength = "64"
-		required pattern = "[a-zA-z\s]*" title = "letters and spaces only"
+		required pattern = "[a-zA-z\s-]*" title = "letters and spaces only"
 		placeholder="Last Name" name="lastname"/>
 		<?php
       		if(isset($_GET['province'])){?>
@@ -45,7 +45,7 @@
 		<input type="email" id = "email" maxlength = "64"
 		placeholder="Email Address" name="email"/>
 		<input id="submitForm" type="submit" value="Register"/>
-		<button id ="cancelForm" onclick ="toggleOverlay(1)">Cancel</button>
+		<button id ="cancelForm" type = "button" onclick ="toggleOverlay(1)">Cancel</button>
 	</form>
 	</div>
 </div>

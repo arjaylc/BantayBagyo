@@ -35,12 +35,8 @@
     </header>
     <div id = "mainContentWrapper">
     <?php 
-      if($session_master->isLoggedin()){
-        include 'includes/settings.inc.php';
-      } else{
-        include 'includes/register.inc.php';
-        include 'includes/login.inc.php';
-      }
+      include 'includes/register.inc.php';
+      include 'includes/login.inc.php';      
       include 'includes/overlay.inc.php';
     ?>
     <script src="js/functions.js"></script>

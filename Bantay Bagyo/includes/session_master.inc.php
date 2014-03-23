@@ -9,13 +9,12 @@
 			}
 			else return false;
 		}
-		public function logUserIn($username, $usertype, $firstname, $lastname, $province, $email){
+		public function logUserIn($username, $usertype, $firstname, $lastname, $province){
 			$_SESSION['username'] = $username;
 			$_SESSION['usertype'] = $usertype;
 			$_SESSION['firstname'] = $firstname;
 			$_SESSION['lastname'] = $lastname;
 			$_SESSION['province'] = $province;
-			$_SESSION['email']= $email;
 			$_SESSION['logged'] = true;
 		}
 
@@ -26,15 +25,13 @@
 			unset($_SESSION['firstname']);
 			unset($_SESSION['lastname']);
 			unset($_SESSION['province']);
-			unset($_SESSION['email']);
 			unset($_SESSION['logged']);
-			setcookie('username', '', time()-$cookie_duration);
-			setcookie('usertype', '', time()-$cookie_duration);
-			setcookie('firstname', '', time()-$cookie_duration);
-			setcookie('lastname', '', time()-$cookie_duration);
-			setcookie('province', '', time()-$cookie_duration);
-			setcookie('email_address', '', time()-$cookie_duration);
-			setcookie('cookied', false, time()-$cookie_duration);
+			setcookie('username', $d_username, time()-$cookie_duration);
+			setcookie('usertype', $usertype, time()-$cookie_duration);
+			setcookie('firstname', $firstname, time()-$cookie_duration);
+			setcookie('lastname', $lastname, time()-$cookie_duration);
+			setcookie('province', $province, time()-$cookie_duration);
+			setcookie('cookied', true, time()-$cookie_duration);
 			$_SESSION = array();
 		}
 	}

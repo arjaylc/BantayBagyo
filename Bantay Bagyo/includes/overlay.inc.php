@@ -1,1 +1,1 @@
-<button id="overlay" onmousedown= "toggleOverlay(0)"></button>
+<button id="overlay" onmousedown= "toggleOverlay(0)"></div>

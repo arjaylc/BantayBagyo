@@ -29,8 +29,7 @@
 	$email = $database_master->escapeString($email);
 
 	$redirectPage = 'index.php?';
-	if(empty($email)||empty($username)||empty($password1)||empty($password2)||empty($firstname)||empty($lastname)
-		||empty($province)){
+	if(empty($username)||empty($password1)||empty($password2)||empty($firstname)||empty($lastname)||empty($province)){
 		$errors['error'] = "empty";
 		$redirectPage.='error=empty';
 	}

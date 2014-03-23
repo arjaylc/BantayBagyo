@@ -282,7 +282,6 @@ input:optional:valid {
 #settings-overlay{
     width:200px;
     margin: 0 auto;
-    margin-top: 50px;
 }
 #overlay, #overlay-options, #overlay-settings {
     cursor: default;

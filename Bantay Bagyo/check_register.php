@@ -28,11 +28,16 @@
 	$email = $_POST['email'];
 	$email = $database_master->escapeString($email);
 
-
 	$redirectPage = 'index.php?';
+	if(empty($email)||empty($username)||empty($password1)||empty($password2)||empty($firstname)||empty($lastname)
+		||empty($province)){
+		$errors['error'] = "empty";
+		$redirectPage.='error=empty';
+	}
+
 	if(!$database_master->checkUsername($username)){
 		$errors['username'] = "username";
-		$redirectPage.='username='.$username;
+		$redirectPage.='&username='.$username;
 	}
 	if(!$database_master->checkEmail($email)){
 		$errors['email'] = "email";

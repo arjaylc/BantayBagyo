@@ -2,6 +2,10 @@
 	<div id="form" class="rounded-small">
 	<form id="registerform" action="check_register.php" method="POST">
 		<?php
+			if(isset($_GET['error'])&&$_GET['error']=='empty'){?>
+		<span id = "empty-error">Please fill out all of the fields. :)</span>
+		<?php
+			}
       		if(isset($_GET['username'])){?>
       	<span id = "username-error"><?php echo "'".$_GET['username']."' has already been taken."?></span>
     	<?php

@@ -14,7 +14,8 @@
       <script src="js/onload/loginerror.js"></script>
     <?php
       }
-      if(isset($_GET['username'])||isset($_GET['province'])||isset($_GET['email'])){?>
+      if((isset($_GET['error'])&&$_GET['error']=='empty')||isset($_GET['username'])||isset($_GET['province'])
+      	||isset($_GET['email'])){?>
       <script src="js/onload/registererror.js"></script>
     <?php
       }

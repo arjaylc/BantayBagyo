@@ -315,7 +315,7 @@ input:optional:valid {
     width: 150px;
     height: 30px;
 }
-#loginerror, #username-error, #email-error, #province-error{
+#loginerror, #username-error, #email-error, #province-error, #empty-error{
     color: red;
     font: 12px;
     display:inline-block;
@@ -335,4 +335,8 @@ input:optional:valid {
 #changePasswordButton:hover, #addProvinceButton:hover{
     text-decoration: underline;
     color: #222;
+}
+#register-overlay{
+    height: 100%;
+    overflow: auto;
 }

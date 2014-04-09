@@ -49,14 +49,24 @@
 			$string = mysqli_real_escape_string($this->databaseConnection, trim($string));
 			return $string;
 		}
-		public function checkUsername($username){
-			$query = "SELECT username FROM users WHERE username='$username'";
+		
+		public function checkEmail($email){
+			$query = "SELECT email_address FROM users WHERE email_address='$email'";
 			$result = mysqli_query($this->databaseConnection, $query);
 			if($result){
 				if(mysqli_num_rows($result)) return false;
 				else return true;
 			}
-			else return true;
+			else return false;
+		}
+		public function checkPassword($email, $password){
+			$query = "SELECT password FROM users WHERE password=SHA('$password') AND email_address = '$email'";
+			$result = mysqli_query($this->databaseConnection, $query);
+			if($result){
+				if(mysqli_num_rows($result)) return true;
+				else return false;
+			}
+			else return false;
 		}
 
 		public function checkProvince($provinces){
@@ -69,14 +79,5 @@
 			else return false;
 		}
 
-		public function checkEmail($email){
-			$query = "SELECT email_address FROM users WHERE email_address='$email'";
-			$result = mysqli_query($this->databaseConnection, $query);
-			if($result){
-				if(mysqli_num_rows($result)) return false;
-				else return true;
-			}
-			else return false;
-		}
 	}
 ?>

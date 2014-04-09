@@ -1,0 +1,3 @@
+1. Extract the files in the BantayBagyo folder to your localhost server folder.
+2. Import the BantayBagyo.sql file found in the database folder to your MYSQL Server you are using.
+3. Run localhost on your browser.

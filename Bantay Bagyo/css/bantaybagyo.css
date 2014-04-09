@@ -1,11 +1,13 @@
-
-body{
+html,body{
     height:100%;
     width:100%;
     padding: 0px;
     margin: 0px;
+    
+}
+body{    
     background-color:#116699;
-    position: fixed;
+    font-family: 'Century Gothic';
 }
 body, button, #submitForm{
     font-family: 'Century Gothic';
@@ -27,7 +29,6 @@ button{
     height: 50px;
     width:100px;
     background-color: #222;
-    z-index: 2;
 }
 button:focus{
     background-color: #222;
@@ -37,11 +38,13 @@ a{
     text-decoration: none;
     min-height: 100px;
 }
-a:hover{
+a:hover, a:visited{
     color: white;
 }
 header{
     z-index: 2;
+    position: absolute;
+    top:0;
     background-color: #222;
     height:50px;
     color: white;
@@ -65,13 +68,13 @@ input:optional:valid {
     background:hsl(300, 50%, 90%);
     border:1px dotted hsl(180, 50%, 90%);
 }
-#login_password, #login_username{
+#login_password, #login_username, #password{
     background:hsl(180, 50%, 90%);
     border:1px solid #999;
 }
 #header-wrapper{
     width:85%;
-    margin-left: auto;
+    margin-left: 80px;
     margin-right:auto;
     font: 30px;
 }
@@ -88,51 +91,60 @@ input:optional:valid {
     background-color: #eee;
     color: #222; 
     font-size: 20px;
-    -webkit-box-shadow: 10px 3px 5px 0px rgba(50, 50, 50, 0.75);
-    -moz-box-shadow:    10px 3px 5px 0px rgba(50, 50, 50, 0.75);
-    box-shadow:         10px 3px 5px 0px rgba(50, 50, 50, 0.75);
 }
 
 #floating-sidebar-typhoon{
-    z-index: 2;
-    position: absolute;
-    top: 0px;
-    left:0%;
-    height: 100px;
-    width: 240px;       
+    z-index: 5;
+    position: fixed;
+    float:left;
+    height: 100%;
+    width: 20%;
+    border-right-style:solid;
+    border-right-width:medium;      
+}
+#province-details{
+    position: fixed;
+    float:left;
+    color: #222; 
+    font-size: 20px;
+    max-height: 85%;
+}
+#province{
+    margin-bottom: 10px;
 }
 .floating-sidebar-details{
-    padding: 10px 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     margin-top: 0;
+    width: 100%;
+    border-bottom: #222;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
 }
-
+#typhoon-details{
+    max-height: 15%;
+}
 .floating-sidebar-details table{
     width: 100%;
 }
-
+#map_canvas {
+    position: relative;
+    float:right;
+    width: 80%;
+    height: 100%;
+}
 
 .table-cat{
     font-weight: bold;
 }
 
 #mainContentWrapper{
+    padding-top: 50px;
     clear: both;
     width: 100%;  
-    height: 93%; 
-    position:absolute;
+    height: 100%; 
 }
 
-
-
-#legendWrapper{
-    left:25%;
-    z-index: 5;
-    width: 50%;
-    height: 30px;
-    position: fixed;
-    bottom: 0;
-    background: #222;
-}
 
 #legendContent{
     color: white;
@@ -188,53 +200,28 @@ input:optional:valid {
     position: fixed;
     bottom:0;
     right: 0;    
-    background-color: #eee;
     color: #222; 
     font-size: 20px;
     height: 50px;
-    width: 505px;
+    width: 350px;
 }
 
 #legend table td{
     text-align: center;
     padding: 5px 5px;
 }
-@media (max-width: 640px){
-  
-    #floating-sidebar-typhoon{
-        top: 0%;
-        position: relative;
-        height: 65px;
-        width: 100%;
-        -webkit-box-shadow: 0px 0px 0px 0px rgba(50, 50, 50, 0.75);
-        -moz-box-shadow:    0px 0px 0px 0px rgba(50, 50, 50, 0.75);
-        box-shadow:         0px 0px 0px 0px rgba(50, 50, 50, 0.75);    
-    }
-    #legend{
-        top: 0%;
-        position: relative;
-        width: 100%;       
-    }
-    
-   
-}
-@media (max-width: 520px){
-  
-   
-    #legend{
-        height: 60px;
-    }
-}
-#form{
+.form{
+    overflow-y: auto;
     border:1px solid #aaa;
     padding:10px;
     padding-bottom: 0px;
-    float:left;
     background-color:#fff;
     font-size:15px;
     width:215px;
+    min-width:215px;
+    max-height: 100%;
 }
-#form, .textfield{
+.form, .textfield{
     width:200px;
 }
 #content{
@@ -245,11 +232,11 @@ input:optional:valid {
 }
 #cancelForm{
     width: 80px;
-    background:linear-gradient(0deg, #222, #222);
+    background:#222;
 }
 #submitForm{
     width:90px;
-    background:linear-gradient(0deg, #116699, #116699);
+    background:#116699;
 }
 #submitForm, #cancelForm, #settingsbutton, #logoutbutton, #adminbutton{
     border:1px solid rgba(0,0,0,0.3); 
@@ -269,19 +256,20 @@ input:optional:valid {
     float: right;
 }
 #register-overlay{
-    padding-right: 104px;
+    max-width: 215px;
+    margin-right: 104px;
 }
 #register-overlay, #login-overlay, #dropdown-options{
     float: right;
 }
-#register-overlay, #login-overlay, #dropdown-options, #settings-overlay{
+.form, #dropdown-options{
     position: relative;
     display: none;
     z-index: 7;
 }
-#settings-overlay{
-    width:200px;
-    margin: 0 auto;
+#province-overlay, #main-province-overlay{
+    float: left;
+    position: absolute;
 }
 #overlay, #overlay-options, #overlay-settings {
     cursor: default;
@@ -314,16 +302,18 @@ input:optional:valid {
     width: 150px;
     height: 30px;
 }
-#loginerror, #username-error, #email-error, #province-error, #empty-error{
+.form-error{
     color: red;
     font: 12px;
     display:inline-block;
-    border:1px solid rgba(0.5,0,0,0); 
+    border: red;
+    border-width: 1px;
+    border-style: solid;
     background:hsl(0, 50%, 90%);
     margin-bottom: 10px;
     padding: 2px;
 }
-#changePasswordButton, #addProvinceButton{
+#changePasswordButton, #addProvinceButton, #changeProvinceButton, #forgotPasswordButton {
     color: gray;
     background: white;
     font-size: 13px;
@@ -331,11 +321,84 @@ input:optional:valid {
     width: auto;
     margin-bottom: 10px;
 }
-#changePasswordButton:hover, #addProvinceButton:hover{
+#changePasswordButton:hover{
     text-decoration: underline;
     color: #222;
 }
+
 #register-overlay{
-    height: 100%;
-    overflow: auto;
+    max-height: 100%;
+}
+
+#searchbox{
+    float:left;
+    padding-top: 5px;
+    padding-left: 10%;
+    width: 50%;
+}
+
+#main-province{
+    max-height: 115px;
+
+}
+#other-province-details{
+    max-height: 260px;
+}
+#other-province-details, #main-province{
+    overflow-y: auto;
+}
+#addProvinceButton:hover, #changeProvinceButton:hover, #forgotPasswordButton:hover{
+    text-decoration: underline;
+}
+#addProvinceButton, #changeProvinceButton{
+    background-color: #eee;
+    color: #222; 
+    font-size: 12px;
+}
+
+#settings-overlay, #password-overlay{
+    position: fixed;
+    width:100px;
+    max-width: 100px;
+    margin-left: 40%;
+}
+
+
+@media (max-width: 750px){
+    #searchbox{
+        position: absolute;
+        top: 70px;
+        right:5%;
+        width:70%;
+    }
+}
+
+@media (max-width: 680px){
+  
+    #floating-sidebar-typhoon{
+        top: 0%;
+        position: relative;
+        width: 100%;
+        height: 200px;
+        border-right-style:none;
+        border-bottom-style:solid;
+        border-bottom-width:medium;   
+    }
+    #map_canvas{
+        top: 200px;
+        width: 100%;
+    }
+    #floating-sidebar-typhoon > .floating-sidebar-details:first-child{
+       height: 50px;
+       margin-bottom: 50px;
+    }
+    #addProvinceButton{
+        display: none;
+    }
+    #searchbox{
+        width: 85%;
+        top: 270px;
+    
+    }
+  
 }

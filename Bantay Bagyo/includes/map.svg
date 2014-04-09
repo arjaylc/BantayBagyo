@@ -2361,3 +2361,16 @@
 	c0.019,1.741,1.721,3.907,3.332,4.318c4.44,1.131,9.014,1.539,13.116-0.66C803.301,768.338,807.271,767.819,811.467,767.809z"/>
 </g>
 </svg>
+
+    
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+      window.onload = function(){
+    svgPanZoom.init({
+      //'selector': 'svg',
+      'zoomEnabled': true 
+    });
+      }
+    </script>

@@ -1,7 +1,7 @@
 <?php
 	$title = 'Welcome';
-	include('includes/header.inc.php');
-  	include('includes/mainpage.inc.php');
+	require('includes/header.inc.php');
+  	require('includes/mainpage.inc.php');
 ?>
   </body>
 </html>

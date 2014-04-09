@@ -3,11 +3,11 @@
 	<table>
 	  <tr>
 	    <td class="table-cat">Legend:</td>
-	    <td class="table-cat fine">Fine</td>
-	    <td class="table-cat sig1">Signal #1</td>
-	    <td class="table-cat sig2">Signal #2</td>
-	    <td class="table-cat sig3">Signal #3</td>
-	    <td class="table-cat sig4">Signal #4</td>
+	    <td><img src="../Assets/fine.png" width = 40></td>
+	    <td><img src="../Assets/sig1.png" width = 40></td>
+	    <td><img src="../Assets/sig2.png" width = 40></td>
+	    <td><img src="../Assets/sig3.png" width = 40></td>
+	    <td><img src="../Assets/sig4.png" width = 40></td>
 	  </tr>      
 	</table>
 	

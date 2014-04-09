@@ -1,7 +1,7 @@
 <?php
-	include('includes/database_master.inc.php');
-	include('includes/page_master.inc.php');
-	include('includes/session_master.inc.php');
+	require_once('includes/database_master.inc.php');
+	require_once('includes/page_master.inc.php');
+	require_once('includes/session_master.inc.php');
 
 	$database_master = new DatabaseMaster();
 	$session_master = new SessionMaster();

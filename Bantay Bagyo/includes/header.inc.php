@@ -17,14 +17,15 @@
         <div id = "logo-wrapper">
 	       <p><a href="">Bantay Bagyo</a></p>
         </div>
+	<div id = "searchbox">
+	<input id="pac_input" class="controls" type="text" placeholder="Search Box">
+	</div>
         <div id = "form-wrapper">
 	       <div id="links">
             <?php
               if($session_master->isLoggedin()){
-                echo '<div id = "options">';
                 include ('includes/header_options_button.inc.php');
                 include ('includes/header_dropdown_options.inc.php');
-                echo '</div>';
               } else{
                 include ('includes/header_buttons.inc.php');
               }
